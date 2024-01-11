@@ -30,10 +30,19 @@
     }
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
     "parcel": "^2.10.3",
     "parcel-namer-rewrite": "^2.10.3-rc.2",
     "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
     "rimraf": "^3.0.2",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "stream-browserify": "^3.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.4",
+    "three": "^0.160.0"
   }
 }

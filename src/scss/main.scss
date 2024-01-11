@@ -42,3 +42,29 @@ video {
 /* ====================================
 // base rules
 // ==================================== */
+
+p {
+  text-transform: uppercase;
+  font-size: 200px;
+  line-height: 1;
+  font-family: "Anton", sans-serif;
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 150px;
+  }
+}
+
+footer {
+  background: yellow;
+  padding: 50px 0;
+  margin-top: 30vh;
+  z-index: 2;
+  position: relative;
+}
+
+.canva-container {
+  position: fixed;
+  z-index: 0;
+}
