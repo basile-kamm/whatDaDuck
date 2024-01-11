@@ -1,0 +1,39 @@
+{
+  "name": "eikon-parcel-starter",
+  "version": "1.0.0",
+  "description": "Web projects starterkit for eikon studenrs",
+  "scripts": {
+    "clean:output": "rimraf dist",
+    "clean:cache": "rimraf .parcel-cache",
+    "dev": "npm run clean:cache && parcel src/index.html",
+    "build": "npm run clean:output && parcel build src/index.html --public-url '.' --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eikon-frontend/starterkit.git"
+  },
+  "author": "eikon frontend development team",
+  "license": "ISC",
+  "homepage": "https://github.com/eikon-frontend/starterkit",
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(.*)\\.(css)": "css/$1{.hash}.$2",
+      "(.*)\\.(js)": "js/$1{.hash}.$2",
+      "(.*)\\.(woff|woff2?)": "fonts/$1.$2",
+      "(.*)\\.(mp3)": "audio/$1.$2",
+      "(.*)\\.(mp4|ogg|webm)": "video/$1.$2",
+      "(.*)\\.(svg|png|gif|jpg|webp)": "img/$1{.hash}.$2"
+    },
+    "silent": true,
+    "development": {
+      "disable": false
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "parcel-namer-rewrite": "^2.10.3-rc.2",
+    "posthtml-include": "^1.7.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.69.5"
+  }
+}
