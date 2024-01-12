@@ -3,6 +3,7 @@
 // ==================================== */
 
 :root {
+  --yellow: #f8e21a;
 }
 
 /* ====================================
@@ -26,6 +27,11 @@ body {
 
   font-size: 1rem;
   line-height: 1.25;
+  background: var(--yellow);
+}
+
+*::selection {
+  background: var(--yellow);
 }
 
 a {
@@ -37,34 +43,147 @@ video {
   max-inline-size: 100%;
   block-size: auto;
   vertical-align: middle;
+  display: block;
 }
 
 /* ====================================
 // base rules
 // ==================================== */
 
-p {
-  text-transform: uppercase;
-  font-size: 200px;
-  line-height: 1;
+section {
+  height: 100vh;
+  background: white;
+}
+
+body {
   font-family: "Anton", sans-serif;
 }
 
 @media (max-width: 767px) {
-  p {
-    font-size: 150px;
-  }
-}
-
-footer {
-  background: yellow;
-  padding: 50px 0;
-  margin-top: 30vh;
-  z-index: 2;
-  position: relative;
 }
 
 .canva-container {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ====================================
+// Heading
+// ==================================== */
+
+.heading {
+  background: var(--yellow);
+  position: relative;
+  text-align: center;
+}
+
+.moutains {
+  position: absolute;
+  bottom: 0;
+}
+
+.title {
+  font-size: 15vw;
+  padding-top: 10vh;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 28vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .title {
+    padding-top: 0;
+  }
+}
+
+/* ====================================
+// Text section
+// ==================================== */
+
+.text-comment {
+  font-family: "Lato", sans-serif;
+  font-size: 3vw;
+}
+
+.text-title {
+  font-size: 6vw;
+}
+
+.text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8vw;
+}
+
+.text-section.right {
+  padding-left: 40vw;
+  padding-right: 8vw;
+}
+
+.text-section.left {
+  padding-left: 8vw;
+  padding-right: 40vw;
+}
+
+/* ====================================
+// Last section
+// ==================================== */
+
+.last-section {
+  height: inherit;
+  padding: 0 0.5vw;
+}
+
+.big-text {
+  text-transform: uppercase;
+  font-size: 150px;
+  line-height: 135px;
+}
+
+@media (max-width: 767px) {
+  .big-text {
+    font-size: 90px;
+    line-height: 80px;
+  }
+}
+
+@media (min-width: 768) and (max-width: 991px) {
+  .big-text {
+    font-size: 110px;
+    line-height: 100px;
+  }
+}
+
+/* ====================================
+// Footer
+// ==================================== */
+
+footer {
+  background: var(--yellow);
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2vh;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 6vw;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  transition: 0.4s;
+}
+
+.link:hover {
+  border-bottom: 4px solid rgba(0, 0, 0, 1);
 }
