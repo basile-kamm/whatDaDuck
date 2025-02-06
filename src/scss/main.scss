@@ -44,6 +44,7 @@ video {
   block-size: auto;
   vertical-align: middle;
   display: block;
+  pointer-events: none;
 }
 
 /* ====================================
@@ -80,7 +81,7 @@ body {
 
 .moutains {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
 }
 
 .title {
@@ -136,7 +137,7 @@ body {
 
 .last-section {
   height: inherit;
-  padding: 0 0.5vw;
+  padding: 5vh 0.5vw 0;
 }
 
 .big-text {
@@ -169,6 +170,11 @@ footer {
   position: relative;
   text-align: center;
   padding: 20px;
+}
+
+footer p::selection,
+footer a::selection {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .link-container {
