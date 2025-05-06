@@ -5,4 +5,4 @@ ScrollTrigger.
 
 I'm still in the learning process, so I hope i'll do a great job with it :)
 
-### [See the website](https::/what-da-duck.basile-kamm.ch)
+### [See the website](https://what-da-duck.basile-kamm.ch)
